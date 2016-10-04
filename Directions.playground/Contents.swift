@@ -51,3 +51,32 @@ playerDidMove(direction2)
 playerDidMove(direction3)
 
 playerDidMove(.left)
+
+enum Name {
+    case first(String)
+    case last(String)
+    
+    var yellName: String {
+        switch self {
+        case .first(let x):
+            return x.uppercased()
+        case .last(let y):
+            return y.uppercased()
+        }
+    }
+}
+
+let myFirstName: Name = .first("doug")
+let myLastName: Name = .last("galante")
+
+print(myFirstName.yellName)
+print (myLastName.yellName)
+
+
+
+
+
+
+
+
+
